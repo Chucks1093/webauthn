@@ -1,0 +1,19 @@
+{
+  "name": "webauthn",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "@passwordless-id/webauthn": "^1.5.0",
+    "node-libs-browser": "^2.2.1",
+    "uuid": "^9.0.1"
+  }
+}
