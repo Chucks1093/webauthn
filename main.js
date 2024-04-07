@@ -20,7 +20,7 @@ const registerUser = async (e) => {
 	}
 	const challengeBytes = uuidv4();
 	try {
-		const registration = await client.register(userName, challengeBytes, {
+		const registration = await client.register(userName.toLowerCase(), challengeBytes, {
 			authenticatorType: 'auto',
 			userVerification: 'required',
 			timeout: 60000,
@@ -63,7 +63,7 @@ const authenticateUser = async () => {
 	}
 
 	const allUsers = getAuthNUsers();
-	const existingUser = allUsers.find((user) => user.username === userName);
+	const existingUser = allUsers.find((user) => user.username === userName.toLowerCase());
 	if (!existingUser) {
 		alert('User has not registered');
 		return;
